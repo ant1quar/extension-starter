@@ -1,0 +1,11 @@
+node_modules/
+.idea/
+extension/popup.js
+extension/popup.js.map
+extension/index.html
+extension/widget.js
+extension/background.js
+extension/content
+yarn-error.log
+yarn.lock
+popup/**/*.module.scss.d.ts

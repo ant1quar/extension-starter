@@ -1,0 +1,7 @@
+webpack.popup.config.js
+webpack.widget.config.js
+webpack.server.config.js
+webpack.background.config.js
+webpack.config.js
+background/common/crypt.helper.ts
+*.css

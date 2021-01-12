@@ -1,0 +1,83 @@
+{
+  "name": "extension-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:prod": "env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "repository": "https://github.com/ant1quar/react-extension",
+  "author": "Ivan Krivonos <krivonos.ivann@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@types/hookrouter": "^2.2.5",
+    "cashaddrjs": "^0.3.12",
+    "classnames": "^2.2.6",
+    "hookrouter": "^1.2.5",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-router-dom": "^5.2.0",
+    "typescript": "^4.0.3",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.127",
+    "@types/classnames": "^2.2.11",
+    "@types/material-ui": "^0.21.8",
+    "@types/node": "^14.14.16",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-router-dom": "^5.1.6",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "babel-eslint": "^10.0.0",
+    "css-loader": "^5.0.0",
+    "css-modules-typescript-loader": "^4.0.1",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "node-sass": "^5.0.0",
+    "normalize.scss": "^0.1.0",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.7",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "popup/**/*.{js,jsx,ts,tsx,json,css}": [
+      "pretty-quick --staged",
+      "eslint ./popup"
+    ],
+    "background/**/*.{js,jsx,ts,tsx,json,css}": [
+      "pretty-quick --staged",
+      "eslint ./background"
+    ],
+    "widget/**/*.{js,jsx,ts,tsx,json,css}": [
+      "pretty-quick --staged",
+      "eslint ./widget"
+    ]
+  }
+}
